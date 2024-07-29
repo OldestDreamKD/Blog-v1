@@ -8,6 +8,7 @@ app.use(bodyparser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
+const port = process.env.PORT || 3000;
 const mongousername = process.env.MONGO_USERNAME;
 const mongopassword = process.env.MONGO_PASSWORD;
 const url =
@@ -80,6 +81,6 @@ app.get("/contact", function (req, res) {
   res.render("contact");
 });
 
-app.listen(3000, function () {
+app.listen(port, function () {
   console.log("Server started on port 3000");
 });
