@@ -1,0 +1,19 @@
+{
+  "name": "personalblog-v3",
+  "version": "1.0.0",
+  "description": "Personal Diary blog website with bootstrap",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "OldestDreamKD",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "bootstrap-icons": "^1.11.3",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1"
+  }
+}

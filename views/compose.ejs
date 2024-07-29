@@ -1,0 +1,38 @@
+<%- include("header") -%>
+
+<main class="container">
+  <div class="col-md">
+    <form action="/compose" method="post" class="blog-post">
+      <h2 class="pb-2 my-3 fst-italic border-bottom border-3">Compose</h2>
+      <div class="col-12 mb-3">
+        <label for="inputAddress2 Title" class="form-label">Title</label>
+        <input
+          name="Title"
+          type="text"
+          class="form-control"
+          id="inputTitle1 Title"
+          placeholder="Enter Title here"
+        />
+      </div>
+      <div class="form">
+        <label for="floatingTextarea Post">Entry</label>
+        <textarea
+          name="Post"
+          class="form-control"
+          style="height: 150px"
+          placeholder="Wrtie your entry here"
+          id="floatingTextarea Post"
+        ></textarea>
+      </div>
+      <button
+        class="btn btn-outline-primary rounded-pill my-3"
+        id="entryPublish"
+        type="submit"
+      >
+        Publish
+      </button>
+    </form>
+  </div>
+</main>
+
+<%- include("footer") -%>

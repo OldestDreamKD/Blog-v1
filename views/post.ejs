@@ -1,0 +1,20 @@
+<%- include("header") -%>
+
+<article class="blog-post container mt-4">
+  <% for(var i = 0; i< Entry.length; i++){ %>
+  <h2
+    class="pb-2 mb-3 fst-italic border-bottom border-3 fs-2 d-flex justify-content-between"
+  >
+    <%= Entry[i].title %>
+    <a
+      id="entryDelete"
+      href="/delete/<%= Entry[0].id %>"
+      class="btn btn-sm btn-primary mt-1 ms-1"
+      >Delete</a
+    >
+  </h2>
+  <p class="blog-post-meta fs-5"><%= Entry[i].entry %></p>
+  <% } %>
+</article>
+
+<%- include("footer") -%>

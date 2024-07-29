@@ -1,0 +1,32 @@
+<%- include("header") -%>
+
+<main class="container">
+  <a class="btn btn-outline-primary rounded-pill my-3" href="/compose">+ New</a>
+  <div class="col-md">
+    <article class="blog-post">
+      <h2 class="pb-2 mb-3 fst-italic border-bottom border-3 fs-2">
+        Introduction
+      </h2>
+      <p class="blog-post-meta fs-5">
+        Welcome to my anonymous blog! This is a place where anyone can share
+        their thoughts, experiences, and passions. You will be logged in as
+        guest for the time being, browsing and posing here can be done and
+        viewed by anyone. Please use responsibly until authentication has been
+        added for privacy.Thanks for stopping by!
+      </p>
+    </article>
+    <article class="blog-post">
+      <% for(var i = 0; i< Entry.length; i++){ %>
+      <h2 class="pb-2 mb-3 fst-italic border-bottom border-3 fs-2">
+        <%= Entry[i].title %>
+      </h2>
+      <p class="blog-post-meta fs-5">
+        <%= Entry[i].entry.substring(0,100) %>
+        <a href="/entry/<%= Entry[0].id %>">..Read More</a>
+      </p>
+      <% } %>
+    </article>
+  </div>
+</main>
+
+<%- include("footer") -%>
