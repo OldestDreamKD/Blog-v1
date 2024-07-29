@@ -48,7 +48,6 @@ app.get("/compose", function (req, res) {
 });
 
 app.post("/compose", function (req, res) {
-  console.log(req.body);
   const entry = new Entry({
     title: req.body.Title,
     entry: req.body.Post,
